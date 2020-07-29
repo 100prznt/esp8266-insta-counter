@@ -37,7 +37,9 @@ U8G2_MAX7219_64X8_F_4W_SW_SPI u8g2(U8G2_R2, 12, 15, 13, U8X8_PIN_NONE);
 
 
 const long interval = 3000*1000;  // alle 60 Minuten prüfen
-unsigned long previousMillis = millis() - 2980*1000; 
+//const long interval = 60*1000; // ca. 60 Sekunden
+unsigned long previousMillis = millis() - 2980*1000;
+//unsigned long previousMillis = millis() - (interval - 20*1000); 
 unsigned long lastPressed = millis();
 
 WiFiClientSecure client;
